@@ -1,0 +1,195 @@
+<!-- Extending the base template -->
+{% extends 'portfolio/base.html' %}
+{% load static %}
+<!-- Setting the title of the page -->
+{% block title %}Projects{% endblock %}  
+
+<!-- Starting the content block -->
+{% block content %}
+
+    <head>
+        <!-- Title of the page -->
+        <title>My Coding Languages</title>
+        <!-- Linking Bootstrap CSS for styling -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            /* Custom styles for the language cards */
+            .language-card {
+                margin-bottom: 20px;
+            }
+            .language-card img {
+                max-width: 100%;
+                height: auto;
+                transition: transform 0.3s;
+            }
+            .language-card img:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main container for the language cards -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Software Development Technologies</h2>
+            <!-- Row for language images -->
+            <div class="row">
+                <!-- Language card -->
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/Python Logo.png' %}" alt="Python Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Python</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/js.png' %}" alt="JavaScript Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">JavaScript</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/Java Logo.png' %}" alt="Java Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Java</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/c-sharp.png' %}" alt="C# Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">C#</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/c.png' %}" alt="C Programming Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">C Programming</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/MySQL Logo.png' %}" alt="MySQL Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">MySQL</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/sqlite.jpg' %}" alt="SQLITE Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">SQLITE</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/HTML Logo.png' %}" alt="HTML Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">HTML</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/CSS Logo.png' %}" alt="CSS Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">CSS</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/django.jpg' %}" alt="Django Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Django</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/spring boot.png' %}" alt="Spring Boot Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Spring Boot</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/dotnet.png' %}" alt=".NET Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">.NET</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/bootstrap.jpg' %}" alt="Bootstrap Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Bootstrap</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/Git Logo.jpg' %}" alt="Git Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Git</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/linux.png' %}" alt="Linux Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Linux</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/postman.png' %}" alt="Postman Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Postman</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 language-card">
+                    <div class="card">
+                        <img src="{% static 'portfolio/docker.png' %}" alt="Docker Logo" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Docker</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </body>
+
+
+    <div class="container mt-5">
+        <!-- Projects heading with margin bottom for spacing -->
+        <h2 class="mb-4">Projects</h2>
+        <ul class="list-group">
+            <!-- Looping through each project -->
+            {% for project in projects %} 
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- Link to the project's GitHub URL -->
+                    <a href="{{ project.github_url }}" class="text-decoration-none">{{ project.title }}</a>
+                    <!-- Displaying the project's description -->
+                    <span class="text-muted">{{ project.description }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
