@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    /* Light background color */
+    background-color: #f8f9fa;
+    /* Dark text color */
+    color: #343a40; 
+}
+
+h2 {
+    /* Blue heading color */
+    color: #007bff; 
+}
+
+.list-group-item a {
+    /* Blue color for project links */
+    color: #007bff; 
+    /* Bold text for project titles */
+    font-weight: bold; 
+}
+
+.list-group-item a:hover {
+    /* Darker blue on hover */
+    color: #0056b3;
+    /* Underline on hover */
+    text-decoration: underline; 
+}

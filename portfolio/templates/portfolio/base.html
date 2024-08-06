@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Set the title of the page to the specified block title or default to 'My Portfolio' -->
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    
+    <!-- Link to the Bootstrap CSS file for styling -->
+    <link rel="stylesheet" href="{% static 'portfolio/bootstrap.min.css' %}">
+    
+    <!-- Link to a custom CSS file for additional styles -->
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    
+    <!-- Additional inline styles for customization -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light grey background for the page */
+        }
+        .navbar {
+            margin-bottom: 20px; /* Add space below the navbar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background:rgb(200, 200, 200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .navbar a {
+            font-size: 18px;
+            color: grey;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+            align-items: end;
+        }
+        
+        .navbar a:hover{
+            color: rgb(0, 81, 165);
+        }
+        .container {
+            background-color: #ffffff; /* White background for the main content area */
+            padding: 20px; /* Padding around the content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+            border-radius: 8px; /* Rounded corners */
+        }
+        footer {
+            margin-top: 20px; /* Add space above the footer */
+            border-top: 1px solid #e9ecef; /* Light grey border on top of the footer */
+            padding-top: 10px; /* Padding on top of the footer content */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar with Bootstrap styling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navbar items -->
+            <ul class="navbar-nav mr-auto">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                <!-- Conditional rendering based on user authentication status -->
+                {% if user.is_authenticated %}
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main content area -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <!-- Footer with Bootstrap styling -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+    
+    <!-- Link to the Bootstrap JS and Popper.js for interactive components -->
+    <script src="{% static 'portfolio/popper.min.js' %}"></script>
+    <script src="{% static 'portfolio/bootstrap.min.js' %}"></script>
+</body>
+</html>

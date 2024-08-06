@@ -1,0 +1,79 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- About Me Section -->
+    <div class="container mt-5">
+        <!-- Section Title -->
+        <h2 class="text-center mb-4">About Me</h2>
+        
+        <!-- Brief Biography -->
+        <h3 class="text-center">
+            Here is a brief biography about me.
+        </h3>
+
+        
+        <h2>Education:</h2>
+            <ul class="list-group">
+                <!-- University of Cape Town -->
+                <li class="list-group-item">
+                    <img src="{% static 'portfolio/UCT Logo.jpg' %}" alt="" class="" height="100px" width="100px">
+                    <p class="UCT_Course"><br><strong>University of Cape Town</strong> [2019-2023]: "not yet done!"<br><br>B.Sc in Computer Sciences & Computer Engineering</p>
+                </li>
+    
+                <!-- HyperionDev -->
+                <li class="list-group-item">
+                    <img src="{% static 'portfolio/HyperionDev Logo.png' %}" alt="" class="" height="100px" width="100px">
+                    <p class="HyperionDev_Course"><br><strong>HyperionDev</strong>[2024]:<br><br>Software Engineering Course</p>
+                </li>
+            </ul>
+
+            <h2>Experience:</h2>
+            <ul class="list-group">
+                <!-- UCT Tutoring -->
+                <li class="list-group-item">
+                    <img src="{% static 'portfolio/UCT Logo.jpg' %}" alt="" class="" height="100px" width="100px">
+                    <p class="UCT_Course"><br><strong>Tutor at the University of Cape Town</strong> [2023]:
+                        <br><br>I was tutoring INF1002F/S: FOUNDATIONS OF INFORMATION SYSTEMS.
+                        <br>The course introduces information systems and their role in business. 
+                        Fundamental knowledge of Excel and Python
+                         The course topics cover: electronic business, business intelligence, analysing information for decision-making,
+                          computational thinking, information security and privacy, and emerging technologies. 
+                          Both theoretical and practical aspects are covered through lectures and hands-on practical session. </p>
+                </li>
+            </ul>
+        
+            <br><hr><br><h2>Contacts</h2>
+        <!-- Contact Information List -->
+        <ul class="list-group">
+            <!-- Email Contact -->
+            <li class="list-group-item">
+                Email: <a href="mailto:asandilenkala@gmail.com">asandilenkala@gmail.com</a>
+            </li>
+
+            <!-- Instagram Contact -->
+            <li class="list-group-item">
+                Instagram: <a href="https://www.instagram.com/asandile_nkala/" target="_blank">
+                    https://www.instagram.com/asandile_nkala/
+                </a>
+            </li>
+            
+            <!-- LinkedIn Contact -->
+            <li class="list-group-item">
+                LinkedIn: <a href="https://www.linkedin.com/in/asandile-nkala-37b635256/" target="_blank">
+                    https://www.linkedin.com/in/asandile-nkala-37b635256/
+                </a>
+            </li>
+            
+            <!-- GitHub Contact -->
+            <li class="list-group-item">
+                GitHub: <a href="https://github.com/asandilenkala?tab=repositories" target="_blank">
+                    https://github.com/asandilenkala?tab=repositories
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Main container for the content with centered text and margin at the top -->
+    <div class="text-center mt-5">
+        <!-- Main heading with top margin -->
+        <h2 class="mt-3">Welcome to My Portfolio</h2>
+        <!-- Profile picture with responsive and rounded-circle Bootstrap classes for styling -->
+        <img src="static/portfolio/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle" height="400px" width="300px">
+        <!-- Main heading with top margin -->
+        <h1 class="mt-3">Hi, I'm Asandile Nkala.<br> I'm a Software Developer</h1>
+        <!-- Short bio paragraph -->
+        <p>Hello! I'm Asandile Nkala, a passionate Software Developer specializing in Software Engineering. 
+            With a keen interest in solving complex problems and a dedication to continuous learning, 
+            I thrive in creating efficient and innovative software solutions. 
+            My journey in Technology has equipped me with a robust skill set, 
+            including proficiency in various Programming Languages and Technologies. 
+            I am motivated by the ever-evolving landscape of Software Development and am committed 
+            to contributing to impactful Projects that drive progress and innovation.</p>
+    </div>
+{% endblock %}
