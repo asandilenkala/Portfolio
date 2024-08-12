@@ -23,9 +23,7 @@ I am Asandile Nkala, a passionate software developer with a focus on software en
 
 ## How to View the Portfolio
 
-You can view my portfolio by visiting the following URL:
-
-[https://username.github.io/portfolio](??)
+ - The webpage is not yet deployed.
 
 ## Contact Information
 
