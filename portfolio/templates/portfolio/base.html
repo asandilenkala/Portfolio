@@ -70,6 +70,7 @@
                 <a class="nav-link" href="{% url 'home' %}">Home</a>
                 <a class="nav-link" href="{% url 'about' %}">About</a>
                 <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
                 <!-- Conditional rendering based on user authentication status -->
                 {% if user.is_authenticated %}
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>

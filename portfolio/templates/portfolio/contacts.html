@@ -1,0 +1,56 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- Linking Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- About Me Section -->
+    <div class="container mt-5">
+        <!-- Section Title -->
+        <h2 class="text-center mb-4">Contacts</h2>
+        
+        <!-- Brief Biography -->
+        <h4 class="text-center">
+            If you require any further information, please feel free to reach out to me.
+        </h4>
+        
+        <!-- Contact Information List -->
+        <ul class="list-group">
+            <!-- WhatsApp Contact -->
+            <li class="list-group-item">
+                <a href="https://wa.me/0607524664" target="_blank">
+                    <img src="{% static 'portfolio/whatsapp.png'%}" alt="Phone Number" height="30px" width="30px">
+                </a>WhatsApp
+            </li>
+
+            <!-- Email Contact -->
+            <li class="list-group-item">
+                <a href="mailto:asandilenkala@gmail.com">
+                    <img src="{% static 'portfolio/gmail.png'%}" alt="Link to my email" height="30px" width="30px">
+                </a>Gmail
+            </li>
+
+            <!-- Instagram Contact -->
+            <li class="list-group-item">
+                <a href="https://www.instagram.com/asandile_nkala/" target="_blank">
+                    <img src="{% static 'portfolio/instagram.png'%}" alt="Link to instagram" height="30px" width="30px">
+                </a>Instagram
+            </li>
+            
+            <!-- LinkedIn Contact -->
+            <li class="list-group-item">
+                <a href="https://www.linkedin.com/in/asandile-nkala-37b635256/" target="_blank">
+                    <img src="{% static 'portfolio/linkedin.png'%}" alt="Link to linkedin" height="30px" width="30px">
+                </a>Linkedin
+            </li>
+            
+            <!-- GitHub Contact -->
+            <li class="list-group-item">
+                <a href="https://github.com/asandilenkala" target="_blank">
+                    <img src="{% static 'portfolio/github.png'%}" alt="Link to github" height="30px" width="30px">
+                </a>GitHub
+            </li>
+        </ul>
+    </div>
+{% endblock %}

@@ -40,28 +40,28 @@
             <!-- Heading for the signup form -->
             <h2>Create an Account</h2>
             <!-- Signup form starts -->
-            <form method="post" action="{% url 'signup' %}">
+            <form class="form-with-validation" method="post" action="{% url 'signup' %}">
                 {% csrf_token %}
-                <!-- Username field -->
+                <!--{{ form }}-->
+
+                <!-- Username Field -->
                 <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
+                    <label for="{{ form.username.id_for_label }}">Username:</label><br>
+                    {{ form.username }}
                 </div>
-                <!-- Email field -->
+                
+                <!-- Password Field -->
                 <div class="form-group mt-3">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <label for="{{ form.password1.id_for_label }}">Password:</label><br>
+                    {{ form.password1 }}
                 </div>
-                <!-- Password field -->
+                
+                <!-- Confirm Password Field -->
                 <div class="form-group mt-3">
-                    <label for="password1">Password:</label>
-                    <input type="password" class="form-control" id="password1" name="password1" required>
+                    <label for="{{ form.password2.id_for_label }}">Confirm Password:</label><br>
+                    {{ form.password2 }}
                 </div>
-                <!-- Confirm Password field -->
-                <div class="form-group mt-3">
-                    <label for="password2">Confirm Password:</label>
-                    <input type="password" class="form-control" id="password2" name="password2" required>
-                </div>
+                
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary mt-3">Signup</button>
             </form>

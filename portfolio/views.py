@@ -5,11 +5,11 @@ from django.contrib.auth.models import User, Group
 from .models import Project
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
-from django import forms
 
 # Create your views here.
 
 # Custom Signup Form with Email
+'''
 class UserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
@@ -25,6 +25,7 @@ class UserCreationForm(UserCreationForm):
             user_group, created = Group.objects.get_or_create(name='Users')
             user.groups.add(user_group)
         return user
+'''    
 
 def home(request):
     return render(request, 'portfolio/home.html')
@@ -37,14 +38,15 @@ def projects(request):
 def about(request):
     return render(request, 'portfolio/about.html')
 
+def contacts(request):
+    return render(request, 'portfolio/contacts.html')
+
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            #return render(request, 'portfolio/login.html')
-            return redirect('home')  # Redirect to home after signup
+            form.save()
+            return redirect('home')  # Redirect to home after signup.
     else:
         form = UserCreationForm()
     return render(request, 'portfolio/signup.html', {'form': form})
