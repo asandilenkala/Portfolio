@@ -11,3 +11,4 @@ urlpatterns = [
     path('accounts/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),  # Optional: Password reset.
     path('', include('portfolio.urls')),  # App URLs.
 ]
+
